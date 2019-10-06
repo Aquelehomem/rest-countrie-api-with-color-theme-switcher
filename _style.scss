@@ -1,0 +1,141 @@
+section:nth-of-type(1){
+		background:yellow;
+	.wrapper{
+		display:flex;
+		justify-content: space-between;
+		height:100px;
+		padding:0 20px;
+		.span1{
+			display:block;
+			align-self: center;
+		}
+		button{
+			display:block;
+			width:100px;
+			align-self: center;
+			img{
+				width:15px;
+			}
+		}
+	}
+}
+
+main:nth-of-type(1){
+		background:orange;
+	.wrapper{
+		padding:20px 25px;
+		@media screen and (min-width:1000px){
+			padding:40px 60px;
+		}
+		::-moz-placeholder {
+  				color: pink;
+		}
+		input{
+			display:block;
+			margin: 0 auto;
+			width:85%;
+			height:30px;
+			background-image:  url('images/search-solid.svg');
+			background-repeat:no-repeat;
+			background-size: 20px;
+			background-position: 15px;
+			padding:10px 0 10px 70px;
+			max-width:350px;
+			@media screen and (min-width:1000px){
+				margin:0 auto 0 0;
+				float:left;
+			}
+		}
+		
+	}
+	.list1{
+		width:50%;
+		max-width:150px;
+		display:block;
+		background:red;
+		position: relative;
+		margin: 50px 0 0 0;
+		height: 50px;
+		display:flex;
+		padding:5px 30px;
+		@media screen and (min-width:1000px) {
+			margin:0 0 0 auto;
+			height: 40px;
+		}
+		span{
+			display:block;
+			align-self: center;
+			background:purple;
+		}
+		img{
+			width:10px;
+			display:block;
+			margin-left: auto;
+		}
+		&:hover .list2{
+			display:block;
+			position:absolute;
+			background-color: pink;
+			left:0.10px;
+			top:65px;
+			width:100%;
+			transition-property: all;
+			transition-duration:2s; 
+		}
+		.list2{
+			display:none;
+			li{
+				display:block;
+				padding:0 20px;
+				height:40px;
+				display:flex;
+				span{
+					display:block;
+					align-self: center;
+					a{
+						text-decoration: none
+					}
+				}
+			}
+		}
+	}
+	section.content{
+	width:100%;
+	background:purple;
+	display:grid;
+	@media screen and (min-width:906px){
+	grid-template-columns:repeat(4, minmax(180px, 25%)) ;
+	grid-auto-rows: 1fr;
+	grid-gap:3%;
+}
+	margin:50px auto 0 auto;
+	.div{
+		width:60%;
+		border-color:white;
+		border-style: solid;
+		background:orange;
+		line-height: 1.5;
+		margin:0 auto 40px auto;
+		padding:0 0 30px 0;
+		@media screen and (min-width:906px){
+			width:100%;
+		}
+		img{
+			width:100%;
+			margin: 0 0 10px 0;
+		}
+		div{
+			width:100%;
+			padding:0 0 0 5%;
+			h3{
+				margin:0 0 15px 0;
+			}
+			span{
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+}
+
