@@ -58,6 +58,7 @@ main:nth-of-type(1){
 		height: 50px;
 		display:flex;
 		padding:5px 30px;
+
 		@media screen and (min-width:1000px) {
 			margin:0 0 0 auto;
 			height: 40px;
@@ -65,7 +66,7 @@ main:nth-of-type(1){
 		span{
 			display:block;
 			align-self: center;
-			background:purple;
+			background:orange;
 		}
 		img{
 			width:10px;
@@ -77,10 +78,9 @@ main:nth-of-type(1){
 			position:absolute;
 			background-color: pink;
 			left:0.10px;
-			top:65px;
+			top:53px;
 			width:100%;
-			transition-property: all;
-			transition-duration:2s; 
+			
 		}
 		.list2{
 			display:none;
@@ -101,7 +101,7 @@ main:nth-of-type(1){
 	}
 	section.content{
 	width:100%;
-	background:purple;
+	background:white;
 	display:grid;
 	@media screen and (min-width:906px){
 	grid-template-columns:repeat(4, minmax(180px, 25%)) ;

@@ -72,7 +72,7 @@ main:nth-of-type(1) {
     main:nth-of-type(1) .list1 span {
       display: block;
       align-self: center;
-      background: purple; }
+      background: orange; }
     main:nth-of-type(1) .list1 img {
       width: 10px;
       display: block;
@@ -82,10 +82,8 @@ main:nth-of-type(1) {
       position: absolute;
       background-color: pink;
       left: 0.10px;
-      top: 65px;
-      width: 100%;
-      transition-property: all;
-      transition-duration: 2s; }
+      top: 53px;
+      width: 100%; }
     main:nth-of-type(1) .list1 .list2 {
       display: none; }
       main:nth-of-type(1) .list1 .list2 li {
@@ -100,7 +98,7 @@ main:nth-of-type(1) {
             text-decoration: none; }
   main:nth-of-type(1) section.content {
     width: 100%;
-    background: purple;
+    background: white;
     display: grid;
     margin: 50px auto 0 auto; }
     @media screen and (min-width: 906px) {
