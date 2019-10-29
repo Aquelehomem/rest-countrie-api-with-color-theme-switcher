@@ -132,6 +132,7 @@ main:nth-of-type(1){
 	margin:50px auto 0 auto;
 	.div{
 		width:60%;
+		max-width: 400px;
 		line-height: 1.5;
 		margin:0 auto 20px auto;
 		padding:0 0 15px 0;
@@ -159,5 +160,101 @@ main:nth-of-type(1){
 	}
 }
 
+}
+
+main.details{
+	display:none;
+	
+	.detailsUpdate{
+		padding:30px 30px 50px 30px;
+		@media screen and (min-width:780px){
+			display:flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			padding:40px 40px 200px 40px;
+
+		}
+		.goBack{
+			@media screen and (min-width:780px){
+				align-self: flex-start;
+			}
+		}
+		img{
+			width:90%;
+			max-width:500px;
+			margin:50px auto;
+			display: block;
+			border-radius: 5px;
+			@media screen and (min-width:780px){
+				margin:50px auto 20px 0;
+				align-self:center;
+				max-width:45%;
+				max-width:500px;
+				float:left;
+			}
+		}
+		.divDetails{
+			@media screen and (min-width:780px){
+				align-self:center;
+				width: 45%;
+				max-width: 500px;
+
+			}
+
+			div{
+				line-height:1.7;
+				.block{
+					display:block;
+				}
+				.bold{
+					font-weight: 700;
+				}
+			}
+			.div1{
+				margin:0 auto 40px auto;
+				@media screen and (min-width:780px){
+					float:left;
+					margin:0 0 100px 0;
+				}
+				.title{
+					font-size:1.5em;
+					margin:0 0 20px 0;
+				}
+			}
+			.div2{
+				margin:0 auto 40px auto;
+				@media screen and (min-width:780px){
+					margin:55px 0 0 auto;
+					width:40%;
+				}
+			}
+		}
+		.div3{
+			display:grid;
+			grid-template-columns: repeat(3,minmax(20px,150px));
+			grid-auto-rows: auto;
+			grid-gap: 5px;
+			margin:0 auto;
+			width:90%;
+			max-width:500px;
+			@media screen and (min-width:780px){
+				grid-template-columns: repeat(4,minmax(20px,180px));
+				margin:70px 0 0 0;
+			}
+			h3{
+				grid-column:1/4;
+				align-self: stretch;
+				@media screen and(min-width: 780px){
+				grid-column:1/2;
+				grid-row: 1/5;
+				}
+			}
+			button{
+				align-self: center;
+				padding:2px;
+
+			}
+		}
+	}
 }
 

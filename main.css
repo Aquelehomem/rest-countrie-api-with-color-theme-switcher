@@ -14,6 +14,10 @@ html, body {
   max-width: 1440px;
   margin: 0 auto; }
 
+.break {
+  height: 0;
+  width: 100%; }
+
 body {
   font-size: 14px;
   font-family: 'Nunito Sans', sans-serif; }
@@ -133,6 +137,7 @@ main:nth-of-type(1) {
         grid-gap: 30px; } }
     main:nth-of-type(1) section.content .div {
       width: 60%;
+      max-width: 400px;
       line-height: 1.5;
       margin: 0 auto 20px auto;
       padding: 0 0 15px 0;
@@ -152,5 +157,80 @@ main:nth-of-type(1) {
           margin: 0 0 15px 0; }
         main:nth-of-type(1) section.content .div div span {
           font-weight: bold; }
+
+main.details {
+  display: none; }
+  main.details .detailsUpdate {
+    padding: 30px 30px 50px 30px; }
+    @media screen and (min-width: 780px) {
+      main.details .detailsUpdate {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 40px 40px 200px 40px; } }
+    @media screen and (min-width: 780px) {
+      main.details .detailsUpdate .goBack {
+        align-self: flex-start; } }
+    main.details .detailsUpdate img {
+      width: 90%;
+      max-width: 500px;
+      margin: 50px auto;
+      display: block;
+      border-radius: 5px; }
+      @media screen and (min-width: 780px) {
+        main.details .detailsUpdate img {
+          margin: 50px auto 20px 0;
+          align-self: center;
+          max-width: 45%;
+          max-width: 500px;
+          float: left; } }
+    @media screen and (min-width: 780px) {
+      main.details .detailsUpdate .divDetails {
+        align-self: center;
+        width: 45%;
+        max-width: 500px; } }
+    main.details .detailsUpdate .divDetails div {
+      line-height: 1.7; }
+      main.details .detailsUpdate .divDetails div .block {
+        display: block; }
+      main.details .detailsUpdate .divDetails div .bold {
+        font-weight: 700; }
+    main.details .detailsUpdate .divDetails .div1 {
+      margin: 0 auto 40px auto; }
+      @media screen and (min-width: 780px) {
+        main.details .detailsUpdate .divDetails .div1 {
+          float: left;
+          margin: 0 0 100px 0; } }
+      main.details .detailsUpdate .divDetails .div1 .title {
+        font-size: 1.5em;
+        margin: 0 0 20px 0; }
+    main.details .detailsUpdate .divDetails .div2 {
+      margin: 0 auto 40px auto; }
+      @media screen and (min-width: 780px) {
+        main.details .detailsUpdate .divDetails .div2 {
+          margin: 55px 0 0 auto;
+          width: 40%; } }
+    main.details .detailsUpdate .div3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(20px, 150px));
+      grid-auto-rows: auto;
+      grid-gap: 5px;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 500px; }
+      @media screen and (min-width: 780px) {
+        main.details .detailsUpdate .div3 {
+          grid-template-columns: repeat(4, minmax(20px, 180px));
+          margin: 70px 0 0 0; } }
+      main.details .detailsUpdate .div3 h3 {
+        grid-column: 1/4;
+        align-self: stretch; }
+        @media screen and (min-width: 780px) {
+          main.details .detailsUpdate .div3 h3 {
+            grid-column: 1/2;
+            grid-row: 1/5; } }
+      main.details .detailsUpdate .div3 button {
+        align-self: center;
+        padding: 2px; }
 
 /*# sourceMappingURL=main.css.map */
