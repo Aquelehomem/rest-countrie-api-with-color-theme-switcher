@@ -14,7 +14,7 @@ var container = document.querySelector('.content')
 
 function update(e){
 	container.innerHTML=``
-	for(var c = 0; c<10/*e.length*/;c++){
+	for(var c = 0; c<e.length;c++){
 		var flag= e[c].flag
 		var name = e[c].name
 		var population= e[c].population
@@ -28,6 +28,15 @@ function update(e){
 		<div><span>Region:</span> ${region}</div>
 		<div><span>Capital:</span> ${capital}</div>
 	</div>`
+	var list1 = document.querySelector('.list1')
+	if(list1.id==="listnightmode"){
+		console.log('a')
+		document.querySelectorAll('.div').forEach(a=>a.setAttribute('id','div'))
+	}
+	else{
+		console.log('b')
+		document.querySelectorAll('.div').forEach(a=>a.setAttribute('id',''))
+	}
 	}
 	
 	
@@ -94,7 +103,7 @@ function countries(){
 function updateFilter(e){
 	var content = document.querySelector('.content')
 	content.innerHTML=``
-	for(var c=0;c<10/*e.length*/;c++){
+	for(var c=0;c<e.length;c++){
 		var flag= e[c].flag
 		var name = e[c].name
 		var population= e[c].population
@@ -107,10 +116,26 @@ function updateFilter(e){
 		<div><span>Region:</span> ${region}</div>
 		<div><span>Capital:</span> ${capital}</div>
 	</div>`
+	var list1 = document.querySelector('.list1')
+	if(list1.id==="listnightmode"){
+		console.log('a')
+		document.querySelectorAll('.div').forEach(a=>a.setAttribute('id','div'))
+	}
+	else{
+		console.log('b')
+		document.querySelectorAll('.div').forEach(a=>a.setAttribute('id',''))
+	}
 	}
 	
 }	
 function type(e){
+	var list1 = document.querySelector('.list1')
+	if(list1.id==="listnightmode"){
+		this.style.color='white'	
+	}
+	else{
+		this.style.color=''	
+	}
 	var h3 = document.querySelectorAll('h3')
 	var value = input.value.toUpperCase()
 	var div = document.querySelectorAll('.div')
@@ -126,8 +151,44 @@ function type(e){
 
 
 var button = document.querySelector('.button1')
-button.addEventListener('click',function(){
-	alert('fdlkj')
+button.addEventListener('click',function nightMode(){
+	var list1 = document.querySelector('.list1')
+	if(list1.id===""){
+		list1.setAttribute('id','listnightmode')
+		document.querySelector('.button1').setAttribute('id','button1')
+		document.querySelector('.section1').setAttribute('id','section1')
+		document.querySelector('.button1').setAttribute('id','button1')
+		document.querySelector('.list2').setAttribute('id','listnightmode')
+		document.querySelectorAll('a').forEach(a=>a.setAttribute('id','listnightmode'))
+		document.querySelector('.main').setAttribute('id','main')
+		document.querySelector('input').setAttribute('id','input')
+		document.querySelector('.content').setAttribute('id','section2')
+		document.querySelectorAll('.div').forEach(a=>a.setAttribute('id','div'))
+		document.querySelector('.detailsUpdate').setAttribute('id','detailsUpdate')
+		document.querySelector('.img2').setAttribute('id','img')
+		document.querySelector('.goBack').setAttribute('id','buttonDetails')
+		document.querySelector('.arrow').setAttribute('id','img')
+		document.querySelectorAll('.buttonDetails').forEach(a=>a.setAttribute('id','buttonDetails'))
+	}	
+	else{
+		list1.setAttribute('id','')
+		document.querySelector('.button1').setAttribute('id','')
+		document.querySelector('.section1').setAttribute('id','')
+		document.querySelector('.section1').setAttribute('id','')
+		document.querySelector('.list2').setAttribute('id','')
+		document.querySelectorAll('a').forEach(a=>a.setAttribute('id',''))
+		document.querySelector('.main').setAttribute('id','')
+		document.querySelector('input').setAttribute('id','')
+		document.querySelector('.content').setAttribute('id','')
+		document.querySelector('.div').setAttribute('id','')
+		document.querySelectorAll('.div').forEach(a=>a.setAttribute('id',''))
+		document.querySelector('.detailsUpdate').setAttribute('id','')
+		document.querySelector('.img2').setAttribute('id','')
+		document.querySelector('.goBack').setAttribute('id','')
+		document.querySelector('.arrow').setAttribute('id','')
+		document.querySelectorAll('.buttonDetails').forEach(a=>a.setAttribute('id',''))
+	}
+
 })
 
 
@@ -154,7 +215,7 @@ function detailsUpdate(e){
 	document.querySelector('.details').innerHTML=`
 	<div class="wrapper">
 		<section class="detailsUpdate">
-			<button class="goBack">Back</button>
+			<button class="goBack"><img class="arrow" src="images/arrow-left-solid.svg"><span>Back</span></button>
 			<!--line-break-->
 				<div class="break"></div>
 			<!--line-break-->
@@ -182,10 +243,31 @@ function detailsUpdate(e){
 
 		</section>
 	</div>`
+	document.querySelector('.goBack').addEventListener('click',goBack)
+	var list1 = document.querySelector('.list1')
+	if(list1.id==="listnightmode" || document.querySelector('.button1').id==="button1"){
+		document.querySelector('.detailsUpdate').setAttribute('id','detailsUpdate')
+		document.querySelector('.goBack').setAttribute('id','buttonDetails')
+		document.querySelector('.arrow').setAttribute('id','img')
+	}
+	else{
+		document.querySelector('.detailsUpdate').setAttribute('id','')
+	}
 	var border = e.borders.forEach(a=>{
 		console.log(a)
 		var button = document.createElement('button')
 		button.setAttribute('data-key',`${a}`)
+		if(list1.id==="listnightmode"){
+		button.setAttribute('id',`buttonDetails`)
+		document.querySelector('.goBack').setAttribute('id','buttonDetails')
+		document.querySelector('.arrow').setAttribute('id','img')
+	}
+	else{
+		button.setAttribute('class',`buttonDetails`)
+		document.querySelector('.goBack').setAttribute('id','')
+		document.querySelector('.arrow').setAttribute('id','')
+	}
+		
 		fetch(`https://restcountries.eu/rest/v2/alpha/${a}`)
 		.then(res=>res.json())
 		.then(a=>{
@@ -200,4 +282,8 @@ function detailsUpdate(e){
 		})
 		document.querySelector('.div3').appendChild(button)
 	})
+}
+function goBack(e){
+	document.querySelector('.details').style.display='none'
+	document.querySelector('.main').style.display='block'
 }

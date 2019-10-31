@@ -37,6 +37,10 @@ section.section1 {
     section.section1 .wrapper .span1 {
       display: block;
       align-self: center; }
+      section.section1 .wrapper .span1 h1 {
+        font-size: 1.7em; }
+        section.section1 .wrapper .span1 h1 a {
+          color: black; }
     section.section1 .wrapper .button1 {
       display: block;
       width: 100px;
@@ -44,7 +48,6 @@ section.section1 {
       background: transparent;
       border: none;
       cursor: pointer;
-      color: #858585;
       font-weight: 800; }
       section.section1 .wrapper .button1 img {
         width: 13px;
@@ -57,8 +60,6 @@ main:nth-of-type(1) {
     @media screen and (min-width: 1000px) {
       main:nth-of-type(1) .wrapper {
         padding: 40px 60px; } }
-    main:nth-of-type(1) .wrapper ::-moz-placeholder {
-      color: #858585; }
     main:nth-of-type(1) .wrapper input {
       display: block;
       margin: 0 auto;
@@ -78,13 +79,15 @@ main:nth-of-type(1) {
         main:nth-of-type(1) .wrapper input {
           margin: 0 auto 0 0;
           float: left; } }
+      main:nth-of-type(1) .wrapper input ::placeholder {
+        color: #858585;
+        opacity: 1; }
       main:nth-of-type(1) .wrapper input img {
         display: none; }
   main:nth-of-type(1) .list1 {
     width: 50%;
     max-width: 150px;
     display: block;
-    background: white;
     position: relative;
     margin: 50px 0 0 0;
     height: 50px;
@@ -167,13 +170,34 @@ main.details {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: 40px 40px 200px 40px; } }
-    @media screen and (min-width: 780px) {
-      main.details .detailsUpdate .goBack {
-        align-self: flex-start; } }
+        padding: 40px 30px 200px 30px; } }
+    main.details .detailsUpdate button {
+      border: none;
+      border-radius: 5px;
+      background-color: white;
+      box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.29);
+      cursor: pointer;
+      overflow: hidden; }
+    main.details .detailsUpdate .goBack {
+      width: 30%;
+      max-width: 110px;
+      height: 30px;
+      align-self: flex-start;
+      display: flex;
+      padding: 7px; }
+      @media screen and (min-width: 780px) {
+        main.details .detailsUpdate .goBack {
+          align-self: flex-start;
+          display: flex; } }
+      main.details .detailsUpdate .goBack .arrow {
+        width: 15px;
+        margin: 0 10px 0 10px; }
+      main.details .detailsUpdate .goBack span {
+        margin: 0;
+        display: inline; }
     main.details .detailsUpdate img {
       width: 90%;
-      max-width: 500px;
+      max-width: 400px;
       margin: 50px auto;
       display: block;
       border-radius: 5px; }
@@ -187,10 +211,9 @@ main.details {
     @media screen and (min-width: 780px) {
       main.details .detailsUpdate .divDetails {
         align-self: center;
-        width: 45%;
-        max-width: 500px; } }
+        width: 45%; } }
     main.details .detailsUpdate .divDetails div {
-      line-height: 1.7; }
+      line-height: 1.4; }
       main.details .detailsUpdate .divDetails div .block {
         display: block; }
       main.details .detailsUpdate .divDetails div .bold {
@@ -200,16 +223,18 @@ main.details {
       @media screen and (min-width: 780px) {
         main.details .detailsUpdate .divDetails .div1 {
           float: left;
-          margin: 0 0 100px 0; } }
+          margin: 0 0 100px 0;
+          width: 40%; } }
       main.details .detailsUpdate .divDetails .div1 .title {
-        font-size: 1.5em;
+        font-size: 2em;
         margin: 0 0 20px 0; }
     main.details .detailsUpdate .divDetails .div2 {
       margin: 0 auto 40px auto; }
       @media screen and (min-width: 780px) {
         main.details .detailsUpdate .divDetails .div2 {
           margin: 55px 0 0 auto;
-          width: 40%; } }
+          width: 50%;
+          overflow: hidden; } }
     main.details .detailsUpdate .div3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(20px, 150px));
@@ -232,5 +257,56 @@ main.details {
       main.details .detailsUpdate .div3 button {
         align-self: center;
         padding: 2px; }
+
+#section1 {
+  background: #2b3945;
+  color: #fafafa;
+  border: none; }
+
+#button1 {
+  filter: invert(100%); }
+
+#span {
+  color: white; }
+
+#main {
+  background-color: #202c37; }
+
+#section2 {
+  box-shadow: none;
+  background-color: transparent; }
+
+#div {
+  background-color: #2b3945;
+  color: white; }
+
+#input {
+  background: #2b3945; }
+
+#input::placeholder {
+  color: white;
+  opacity: 1; }
+
+.list1 {
+  background-color: white; }
+
+#filter {
+  color: white; }
+
+#listnightmode {
+  background-color: #2b3945;
+  color: white;
+  text-decoration: none; }
+
+#img {
+  filter: invert(100%); }
+
+#detailsUpdate {
+  background-color: #202c37;
+  color: white; }
+
+#buttonDetails {
+  background: #2b3945;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

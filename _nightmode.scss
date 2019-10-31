@@ -1,0 +1,59 @@
+//night mode
+#section1{
+	background:$darkblue;
+	color:$verylightgray;
+	border:none;
+}
+#button1{
+		filter: invert(100%);
+
+}
+#span{
+	color:white;
+}
+#main{
+	background-color:$verydarkblue;
+}
+#section2{
+	box-shadow: none;
+	background-color: transparent;
+}
+#div{
+	background-color: #2b3945;
+	color:white;
+}
+
+#input{
+	background:$darkblue;
+	
+}
+#input::placeholder {
+  				color: $white;
+  				opacity: 1;
+		}
+
+
+
+
+.list1{
+	background-color: $white;
+}
+#filter{
+	color:$white;
+}
+#listnightmode{
+	background-color: $darkblue;
+	color:$white;
+	text-decoration: none;
+}
+#img{
+	filter: invert(100%);
+}
+#detailsUpdate{
+	background-color: $verydarkblue;
+	color:white;	
+}
+#buttonDetails{
+	background:$darkblue;
+	color:$white;
+}

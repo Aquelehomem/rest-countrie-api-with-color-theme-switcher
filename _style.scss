@@ -3,7 +3,6 @@ section.section1{
 		border-bottom-color: $verylightgray;
 		border-bottom-style: solid;
 		border-width: 7px;
-
 	.wrapper{
 		display:flex;
 		justify-content: space-between;
@@ -12,6 +11,12 @@ section.section1{
 		.span1{
 			display:block;
 			align-self: center;
+			h1{
+				font-size:1.7em;
+				a{
+					color:black;
+				}
+			}
 		}
 		.button1{
 			display:block;
@@ -20,7 +25,6 @@ section.section1{
 			background:transparent;
 			border:none;
 			cursor:pointer;
-			color:$darkgray;
 			font-weight: 800;
 			img{
 				width:13px;
@@ -37,9 +41,7 @@ main:nth-of-type(1){
 		@media screen and (min-width:1000px){
 			padding:40px 60px;
 		}
-		::-moz-placeholder {
-  				color: $darkgray;
-		}
+		
 		input{
 			display:block;
 			margin: 0 auto;
@@ -59,6 +61,10 @@ main:nth-of-type(1){
 				margin:0 auto 0 0;
 				float:left;
 			}
+			::placeholder {
+  				color: $darkgray;
+  				opacity: 1;
+		}
 			img{
 				display:none;
 			}
@@ -69,7 +75,6 @@ main:nth-of-type(1){
 		width:50%;
 		max-width:150px;
 		display:block;
-		background:$white;
 		position: relative;
 		margin: 50px 0 0 0;
 		height: 50px;
@@ -164,24 +169,47 @@ main:nth-of-type(1){
 
 main.details{
 	display:none;
-	
 	.detailsUpdate{
 		padding:30px 30px 50px 30px;
 		@media screen and (min-width:780px){
 			display:flex;
 			justify-content: space-between;
 			flex-wrap: wrap;
-			padding:40px 40px 200px 40px;
+			padding:40px 30px 200px 30px;
 
 		}
+		button{
+			border:none;
+			border-radius: 5px;
+			background-color: $white;
+			box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.29);
+			cursor: pointer;
+			overflow: hidden;
+		}
 		.goBack{
+			width:30%;
+			max-width:110px;
+			height:30px;
+			align-self: flex-start;
+				display:flex;
+				padding:7px;
 			@media screen and (min-width:780px){
 				align-self: flex-start;
+				display:flex;
+
+			}
+			.arrow{
+				width:15px;
+				margin:0 10px 0 10px;
+			}
+			span{
+				margin:0;
+				display:inline;
 			}
 		}
 		img{
 			width:90%;
-			max-width:500px;
+			max-width:400px;
 			margin:50px auto;
 			display: block;
 			border-radius: 5px;
@@ -197,12 +225,11 @@ main.details{
 			@media screen and (min-width:780px){
 				align-self:center;
 				width: 45%;
-				max-width: 500px;
 
 			}
 
 			div{
-				line-height:1.7;
+				line-height:1.4;
 				.block{
 					display:block;
 				}
@@ -215,9 +242,11 @@ main.details{
 				@media screen and (min-width:780px){
 					float:left;
 					margin:0 0 100px 0;
+					width:40%;
+
 				}
 				.title{
-					font-size:1.5em;
+					font-size:2em;
 					margin:0 0 20px 0;
 				}
 			}
@@ -225,7 +254,8 @@ main.details{
 				margin:0 auto 40px auto;
 				@media screen and (min-width:780px){
 					margin:55px 0 0 auto;
-					width:40%;
+					width:50%;
+					overflow: hidden;
 				}
 			}
 		}
@@ -257,4 +287,3 @@ main.details{
 		}
 	}
 }
-
